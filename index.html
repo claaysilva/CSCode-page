@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>CSCode - Desenvolvimento & Automação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --neon-cyan: #00e5ff;
+            --neon-purple: #b537f2;
+            --card-bg: #141414;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-container img {
+            height: 40px; /* Ajuste conforme o tamanho da sua logo */
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-cyan);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 5% 80px;
+            background: radial-gradient(circle at top, rgba(0, 229, 255, 0.1), transparent 50%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: -webkit-linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: transparent;
+            color: var(--neon-cyan);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: var(--neon-cyan);
+            color: var(--bg-color);
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-purple);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer - CRUCIAL PARA APROVAÇÃO DA META */
+        footer {
+            background-color: #050505;
+            padding: 40px 5%;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .footer-col p {
+            margin-bottom: 5px;
+        }
+
+        .footer-col a {
+            color: var(--neon-cyan);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav { display: none; } /* Esconde o menu no celular para simplificar */
+            footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="CSCode Logo"> 
+        </div>
+        <nav class="nav-links">
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Automação e Agentes de IA</h1>
+        <p>A CSCode otimiza processos corporativos através de integrações inteligentes, eliminando tarefas manuais e escalando sua operação com tecnologia de ponta.</p>
+        <a href="https://wa.me/55[SEU_NUMERO_AQUI]" class="cta-button" id="contato">Fale com um Consultor</a>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="service-card">
+            <h3>Automação de Processos</h3>
+            <p>Conectamos seus sistemas e eliminamos tarefas manuais repetitivas para aumentar a eficiência da sua equipe, utilizando plataformas robustas de integração.</p>
+        </div>
+        <div class="service-card">
+            <h3>Agentes de Inteligência Artificial</h3>
+            <p>Desenvolvemos assistentes virtuais inteligentes para atendimento, qualificação de leads, suporte ao cliente e operações internas.</p>
+        </div>
+        <div class="service-card">
+            <h3>Desenvolvimento Sob Medida</h3>
+            <p>Criamos soluções tecnológicas exclusivas, desde integrações via API até painéis de controle adaptados à necessidade específica da sua operação.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-col">
+            <h4>Dados da Empresa</h4>
+            <p><strong>Razão Social:</strong> Clayton Silva Soares</p>
+            <p><strong>CNPJ:</strong> [SEU CNPJ AQUI]</p>
+            <p>&copy; 2026 CSCode - Desenvolvimento & Automação. Todos os direitos reservados.</p>
+        </div>
+        
+        <div class="footer-col">
+            <h4>Endereço Sede</h4>
+            <p>[Sua Rua/Avenida, Número]</p>
+            <p>[Seu Bairro]</p>
+            <p>Pirapora, MG - CEP: [SEU CEP AQUI]</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contato Oficial</h4>
+            <p><strong>Email:</strong> contato@csscode.com.br</p>
+            <p><strong>WhatsApp:</strong> [SEU NUMERO DE TELEFONE COM DDD]</p>
+        </div>
+    </footer>
+
+</body>
+</html>
